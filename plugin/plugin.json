@@ -1,0 +1,8 @@
+{
+    "PLUGIN": [
+        {
+            "FileName": "clipsPoint.py",
+            "ClassName": "clipsPoint"
+        }
+    ]
+}
