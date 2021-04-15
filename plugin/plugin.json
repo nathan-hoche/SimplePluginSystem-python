@@ -3,6 +3,10 @@
         {
             "FileName": "clipsPoint.py",
             "ClassName": "clipsPoint"
+        },
+        {
+            "FileName": "changeColor.py",
+            "ClassName": "changeColor"
         }
     ]
 }
