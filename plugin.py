@@ -49,9 +49,12 @@ def get_plugin():
     plugin = []
     for info in plugin_list["PLUGIN"]:
         print(info)
-        tmp = load_plugin(info)
-        if (tmp != None):
-            plugin.append(tmp)
+        if (info["activate"] == 1):
+            tmp = load_plugin(info)
+            if (tmp != None):
+                plugin.append(tmp)
+        else:
+            print("INFO: module is not activate")
     return plugin
 
 class PLUGIN:

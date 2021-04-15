@@ -1,6 +1,5 @@
 class changeColor:
     def __init__(self) -> None:
-        self.wall = ""
         pass
 
     def edit(self, map = None):
@@ -19,7 +18,10 @@ class changeColor:
             y += 1
         res = ""
         for line in tmp:
-            res += "\n" + line
+            if (res == ""):
+                res = line
+            else:
+                res += "\n" + line
         return res
 
     def desc(self):

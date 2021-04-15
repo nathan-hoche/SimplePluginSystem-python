@@ -13,6 +13,6 @@ while(1):
     print(mapr)
     print("Description:")
     Plugin.desc()
-    time.sleep(0.5)
+    time.sleep(2)
     subprocess.run("clear")
     mapr = Plugin.update(mapr)

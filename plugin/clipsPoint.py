@@ -11,7 +11,10 @@ class clipsPoint:
             tmp[pt[0]] = tmp[pt[0]][:pt[1]] + 'x' + tmp[pt[0]][pt[1]+1:]
         res = ""
         for line in tmp:
-            res += "\n" + line
+            if (res == ""):
+                res = line
+            else:
+                res += "\n" + line
         return res
 
     def desc(self):

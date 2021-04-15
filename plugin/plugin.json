@@ -2,11 +2,18 @@
     "PLUGIN": [
         {
             "FileName": "clipsPoint.py",
-            "ClassName": "clipsPoint"
+            "ClassName": "clipsPoint",
+            "activate": 1
+        },
+        {
+            "FileName": "player.py",
+            "ClassName": "player",
+            "activate": 1
         },
         {
             "FileName": "changeColor.py",
-            "ClassName": "changeColor"
+            "ClassName": "changeColor",
+            "activate": 1
         }
     ]
 }
