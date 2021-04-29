@@ -3,6 +3,8 @@ import sys
 import os
 import importlib
 
+
+############ This part is for generate plugin's log
 def log(func):
     try:
         fd = open("plugin.log", "w")
@@ -14,6 +16,7 @@ def log(func):
     sys.stdout.close
     sys.stdout = old_stdout
     return plugin_list
+##################################################
 
 def load_json():
     with open("plugin/plugin.json") as f:
@@ -32,12 +35,14 @@ def load_plugin(info):
     try:
         classfd = eval('fd.' + info["ClassName"] + '()')
         print("Class found")
+        ####### Check if sample fonction is set
         classfd.edit()
         print("Edit found")
         classfd.desc()
         print("Desc found")
         classfd.update()
         print("Update found")
+        #######################################
     except:
         print("ERROR: class/method crashed")
         return None
@@ -61,6 +66,7 @@ class PLUGIN:
     def __init__(self) -> None:
         self.plugin = get_plugin
 
+    ############ Sample of plugin's fonction (server side)
     def edit(self, map):
         for plugin in self.plugin:
             map = plugin.edit(map)
@@ -74,3 +80,4 @@ class PLUGIN:
         for plugin in self.plugin:
             map = plugin.update(map)
         return map
+    ######################################################
