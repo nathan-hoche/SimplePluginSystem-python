@@ -36,7 +36,7 @@ For launching the process you need to execute the command:
 When you want to adding a plugin, you just need to add the plugin's file inside the folder **plugin**.
 
 To add plugin on program append file information to "PLUGIN" inside **plugin.json**:
-```json
+```
     {
         "FileName": "new_plugin.py",
         "ClassName": "new_plugin_class",
